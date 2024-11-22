@@ -7,15 +7,15 @@ USE testdb;
 */
 
 -- 테이블 삭제 : 테이블이 있으면 지워라 
--- CASCADE : 참조 중인 테이블이 존재하면 함께 삭제하는 옵션
-DROP TABLE IF EXISTS tbl_order CASCADE; -- 주문 테이블 (자식)
-DROP TABLE IF EXISTS tbl_product CASCADE; -- 제품 테이블 (부모)
+-- CASCADE : 참조 중인 테이블이 존재하면 함께 삭제하는 옵션 (MySQL에서는 동작 안함)
+DROP TABLE IF EXISTS tbl_order; -- 주문 테이블 (자식)
+DROP TABLE IF EXISTS tbl_product;  -- 제품 테이블 (부모)
 
 -- 제품 테이블 만들기 : 테이블이 없으면 만들어라
 CREATE TABLE IF NOT EXISTS tbl_product
 ( 
   prod_id    INT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT '제품코드',
-  prod_name  VARCHAR(20) NULL COMMENT '제품이름',
+  prod_name  VARCHAR(20) NULL COMMENT '제품이름', -- NULL : 작성해도 되고, 안해도 되는 선택사항 디폴트값 (NOT NULL : 필수)
   price      INT(5) COMMENT '제품가격', -- INT(5) = 99,999원짜리 제품으로 글자 수 제한
   stock      SMALLINT DEFAULT 0 COMMENT '제품재고'
 ) ENGINE=INNODB COMMENT '제품'; 
@@ -38,8 +38,8 @@ ALTER TABLE tbl_order AUTO_INCREMENT = 1000;
 
 -- 연습용
 -- 테이블 삭제
-DROP TABLE IF EXISTS tbl_customer CASCADE; -- 고객 테이블 삭제 (자식 테이블)
-DROP TABLE IF EXISTS tbl_bank CASCADE; -- 뱅크 테이블 삭제 (부모 테이블)
+DROP TABLE IF EXISTS tbl_customer; -- 고객 테이블 삭제 (자식 테이블)
+DROP TABLE IF EXISTS tbl_bank; -- 뱅크 테이블 삭제 (부모 테이블)
 
 -- 테이블 생성
 CREATE TABLE IF NOT EXISTS tbl_bank
