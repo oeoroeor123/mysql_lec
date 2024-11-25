@@ -4,7 +4,6 @@ USE db_company;
 ALTER TABLE tbl_employee AUTO_INCREMENT = 1001;
 
 -- 행 삽입하기 (INSERT)
-
 -- 단일 행 삽입
 -- INSERT INTO 테이블명(칼럼1, 칼럼2, ...) VALUES(값1, 값2, ...);
 -- 어떤 테이블의 어떤 칼럼(AUTO_INCREMENT는 자동 생성이니 제외)을 가져올지, 칼럼에 어떤 내용을 넣을지 한줄씩 작성
@@ -19,9 +18,9 @@ INSERT INTO tbl_department(dept_name, location) VALUES('기획부', '서울');
 
 -- tbl_employee의 첫 번째 칼럼 emp_id에는 NULL 값을 전달해서 emp_id의 AUTO_INCREMENT 동작을 보장한다.
 INSERT INTO tbl_employee VALUES(NULL, 1, '구창민', '과장', 'M', '95-05-01', '5000000');
-INSERT INTO tbl_employee VALUES(NULL, 2, '김민서', '사원', 'M', '17-09-01', '2500000');
-INSERT INTO tbl_employee VALUES(NULL, 3, '이은영', '부장', 'F', '90-09-01', '5500000');
-INSERT INTO tbl_employee VALUES(NULL, 4, '한성일', '과장', 'M', '93-04-01', '5000000');
+INSERT INTO tbl_employee VALUES(NULL, 1, '김민서', '사원', 'M', '17-09-01', '2500000');
+INSERT INTO tbl_employee VALUES(NULL, 2, '이은영', '부장', 'F', '90-09-01', '5500000');
+INSERT INTO tbl_employee VALUES(NULL, 2, '한성일', '과장', 'M', '93-04-01', '5000000');
  
 -- 영구적으로 저장
 -- 오직 DML(INSERT,UPDATE,DELETE) 작업에서만 필요한 과정
@@ -44,7 +43,6 @@ UPDATE tbl_employee SET salary = salary * 1.5 WHERE emp_id = 1005;
 -- DELETE FROM 테이블명 WHERE 조건식;
 -- emp_id가 1005 이상인 사원 모두 삭제
 DELETE FROM tbl_employee WHERE emp_id >= 1005;
-
 
 -- 연습 문제
 
@@ -136,3 +134,4 @@ INSERT INTO tbl_menu VALUES(NULL, '치즈햄샌드위치', 6000, 'Y', '2');
 INSERT INTO tbl_menu VALUES(NULL, '딸기샌드위치', 5500, 'Y', '2'); 
 INSERT INTO tbl_menu VALUES(NULL, '우롱티', 3700, 'N', '3');
 INSERT INTO tbl_menu VALUES(NULL, '자몽허니블랙티', 4700, 'N', '3');
+INSERT INTO tbl_menu VALUES(NULL, '호밀양배추샌드위치', 5000, 'N', '4');

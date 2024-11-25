@@ -1,7 +1,7 @@
 -- root 계정으로 접속
 -- greenit 계정에 db_company 데이터베이스(스키마) 사용 권한 부여하기
 -- 현재 접속 중인 계정에서 스스로에게 사용 권한 부여하지 못함
--- GRANT ALL PRIVILEGES ON db_company.* TO 'greenir'@'%';
+-- GRANT ALL PRIVILEGES ON db_company.* TO 'greenit'@'%';
 
 
 -- greenit 계정으로 접속
