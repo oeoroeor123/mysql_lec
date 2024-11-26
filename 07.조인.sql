@@ -8,12 +8,12 @@ CROSS JOIN
 
 /* JOIN 절 공부하기 */
 -- 1. 모든 사원의 부서번호, 부서명, 사원번호, 사원명 조회하기
--- ON이 없을 경우, 크로스 조인으로 1:1로 조회가 진행됨
+-- ON (JOIN 조건)이 없을 경우, 크로스 조인으로 1:1로 조회가 진행됨
 SELECT d.dept_id, e.dept_id, dept_name, emp_id, emp_name
  FROM tbl_department d CROSS JOIN tbl_employee e;
  
 /* 
-INNER JION 
+INNER JOIN 
  - 두 테이블이 모두 가지고 있는 데이터를 조회할 때 사용
  - 반드시 올바른 조인 조건을 작성해야 함
 */
