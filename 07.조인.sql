@@ -14,7 +14,7 @@ SELECT d.dept_id, e.dept_id, dept_name, emp_id, emp_name
  
 /* 
 INNER JOIN 
- - 두 테이블이 모두 가지고 있는 데이터를 조회할 때 사용
+ - 조인하는 두 테이블이 모두 데이터 전체를 가지고 있을때 사용
  - 반드시 올바른 조인 조건을 작성해야 함
 */
 
@@ -54,7 +54,8 @@ SELECT menu_code, menu_name, menu_price, category_name, orderable_status
 OUTER JOIN
  - 어느 한 테이블만 가지고 있는 데이터를 조회할 때 사용
  - LEFT (OUTER) JOIN : JOIN을 기준으로, 첫 번째 테이블(왼쪽 테이블)의 모든 데이터는 항상 조회되는 방식
- - RIGHT (OUTER) JOIN : 두번째 테이블(오른쪽 테이블)의 모든 데이터는 항상 조회되는 방식
+   조인하는 두 테이블 중 첫 번째 테이블(왼쪽 테이블)만 전체 데이터를 가지고 있을때 사용
+ - RIGHT (OUTER) JOIN : 두 번째 테이블(오른쪽 테이블)의 모든 데이터는 항상 조회되는 방식
 */
 
 -- 6. 부서 별 사원 수 조회하기, 근무 중인 사원이 없으면 0을 표시
